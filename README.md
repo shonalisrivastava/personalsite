@@ -49,9 +49,15 @@ You can extract image URLs from the current Google Sites pages before migration:
 
 ```bash
 npm run scrape:images
+npm run scrape:download
 ```
 
 This writes `data/scraped-images.json` with:
 - per-page image URLs
 - de-duplicated `uniqueImages`
 - scrape timestamp metadata
+
+
+## Deployment fix for Vercel output directory error
+If Vercel was previously configured with `Output Directory = public`, this Next.js app can fail deployment.
+This repo now includes `vercel.json` forcing Next.js defaults and `.next` output for compatibility.

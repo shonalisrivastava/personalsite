@@ -117,3 +117,15 @@ export const resumeHighlights = {
     'Prabhakar (Kathak) — Prayag Sangeet Samiti'
   ]
 };
+
+
+export const scrapedGalleryImages = [
+  '/images/scraped/shonali-01.jpg',
+  '/images/scraped/shonali-02.jpg',
+  '/images/scraped/shonali-03.jpg',
+  '/images/scraped/shonali-04.jpg',
+  '/images/scraped/shonali-05.jpg',
+  '/images/scraped/shonali-06.jpg',
+  '/images/scraped/shonali-07.jpg',
+  '/images/scraped/shonali-08.jpg'
+];

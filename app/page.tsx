@@ -1,6 +1,7 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { SectionHeading } from '@/components/section-heading';
-import { featuredProjects, offerings, siteConfig } from '@/lib/site-data';
+import { featuredProjects, offerings, scrapedGalleryImages, siteConfig } from '@/lib/site-data';
 
 export default function HomePage() {
   return (
@@ -24,6 +25,19 @@ export default function HomePage() {
               <div key={stat.label} className="rounded-xl border border-gray-100 p-4">
                 <p className="text-2xl font-semibold">{stat.value}</p>
                 <p className="text-sm text-gray-600">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container-wrap">
+          <SectionHeading title="From Current Site Gallery" description="Scraped images from your existing site, now embedded directly into the new design." />
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+            {scrapedGalleryImages.map((src, idx) => (
+              <div key={src} className="overflow-hidden rounded-xl border border-gray-200 bg-gray-50">
+                <Image src={src} alt={`Shonali gallery image ${idx + 1}`} width={500} height={500} className="h-40 w-full object-cover" />
               </div>
             ))}
           </div>

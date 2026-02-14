@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "scrape:images": "node scripts/scrape-images.mjs"
+    "scrape:images": "node scripts/scrape-images.mjs",
+    "scrape:download": "node scripts/download-scraped-images.mjs"
   },
   "dependencies": {
     "next": "14.2.5",
