@@ -43,3 +43,15 @@ Use Formspree (best low-maintenance option for your use case):
 - Add downloadable CV and certificate files in `public/`
 - Add events/talks/testimonials as data collections
 - Add Hindi localization (e.g. `/hi`) in next phase
+
+## Scrape images from current live site
+You can extract image URLs from the current Google Sites pages before migration:
+
+```bash
+npm run scrape:images
+```
+
+This writes `data/scraped-images.json` with:
+- per-page image URLs
+- de-duplicated `uniqueImages`
+- scrape timestamp metadata
