@@ -57,7 +57,7 @@ const classDetails = [
     icon: Drum,
     title: "Tabla",
     who: "Children, teens, and adults who want a grounded rhythm practice.",
-    level: "Beginner to intermediate",
+    level: "Beginner to advanced",
     format: "Private and small-group lessons, online or in person in Dublin, California.",
     ageRange: "Ages 7+",
     outcomes: "Build taal awareness, hand technique, listening skills, and confidence accompanying music.",
@@ -66,7 +66,7 @@ const classDetails = [
     icon: Mic2,
     title: "Vocal Music",
     who: "Students who want to sing with more sur, expression, and cultural understanding.",
-    level: "Beginner to intermediate",
+    level: "Beginner to advanced",
     format: "Private coaching or small groups for Hindustani classical, geet, ghazal, bhajan, Bollywood, and karaoke.",
     ageRange: "Ages 6+ and adults",
     outcomes: "Develop pitch, breath, repertoire, pronunciation, and performance confidence.",
@@ -75,7 +75,7 @@ const classDetails = [
     icon: Flower2,
     title: "Dance",
     who: "Learners who enjoy movement, rhythm, storytelling, and graceful expression.",
-    level: "Beginner to intermediate",
+    level: "Beginner to advanced",
     format: "Kathak and Bollywood-inspired classes, online or in-person based on availability.",
     ageRange: "Children, teens, adults, and seniors",
     outcomes: "Strengthen rhythm, posture, coordination, abhinaya, and stage presence.",
@@ -84,7 +84,7 @@ const classDetails = [
     icon: Palette,
     title: "Art",
     who: "Creative students who want a calm space to explore color, form, and self-expression.",
-    level: "Beginner friendly",
+    level: "Beginner to advanced",
     format: "Guided painting, sketching, and mixed-media sessions for individuals or small groups.",
     ageRange: "Children, adults, and seniors",
     outcomes: "Learn basic techniques, complete personal projects, and enjoy creative confidence.",
@@ -93,7 +93,7 @@ const classDetails = [
     icon: Languages,
     title: "Hindi",
     who: "Families and adult learners who want Hindi to feel natural, useful, and connected to culture.",
-    level: "Beginner to conversational",
+    level: "Beginner to advanced",
     format: "Online or in-person language lessons with reading, speaking, songs, and cultural context.",
     ageRange: "Ages 6+ and adults",
     outcomes: "Improve vocabulary, pronunciation, reading familiarity, and everyday speaking comfort.",
@@ -116,12 +116,12 @@ const testimonials = [
 ];
 
 const galleryItems = [
-  { icon: Music2, title: "Class Moments", description: "Add photos from lessons and group practice." },
-  { icon: Camera, title: "Performances", description: "Feature stage, community, TV, and radio memories." },
-  { icon: Drum, title: "Instruments", description: "Show tabla, harmonium, dholak, and practice details." },
-  { icon: Palette, title: "Artwork", description: "Share student paintings, sketches, and workshop pieces." },
-  { icon: UsersRound, title: "Workshops", description: "Highlight cultural gatherings and foundation programs." },
-  { icon: Sparkles, title: "Student Joy", description: "Add warm, permission-approved candid moments." },
+  { icon: Music2, title: "Class Moments", description: "Lessons and group practice rooted in patience and joy." },
+  { icon: Camera, title: "Performances", description: "Stage, community, TV, and radio memories across India and the USA." },
+  { icon: Drum, title: "Instruments", description: "Tabla, harmonium, dholak, rhythm, and attentive practice." },
+  { icon: Palette, title: "Artwork", description: "Student paintings, sketches, and workshop pieces." },
+  { icon: UsersRound, title: "Workshops", description: "Cultural gatherings and foundation programs for the community." },
+  { icon: Sparkles, title: "Student Joy", description: "Creative growth, confidence, and family connection." },
 ];
 
 const seniorPrograms = [
@@ -774,11 +774,11 @@ export function App() {
               Foundation.
             </p>
             <div className="donationLinks">
-              <a href="#" aria-label="PayPal donation link placeholder">
-                PayPal link coming soon
+              <a href="mailto:shonalisclasses@live.com?subject=PayPal%20Donation%20Link">
+                Request PayPal donation link
               </a>
               <a href="mailto:shonalisclasses@live.com?subject=Zelle%20Donation%20Information">
-                Zelle information coming soon
+                Request Zelle information
               </a>
             </div>
             <div className="seniorNote">
@@ -797,8 +797,8 @@ export function App() {
         <div className="sectionHeader">
           <h2 id="testimonials-title">Student and family voices.</h2>
           <p>
-            Placeholder testimonials are ready for real parent and student
-            quotes as the site gathers permission-approved feedback.
+            Families and students often describe ShAMA classes as patient,
+            encouraging, culturally grounded, and confidence-building.
           </p>
         </div>
         <div className="testimonialGrid">
@@ -815,11 +815,10 @@ export function App() {
       <section className="gallerySection" id="gallery" aria-labelledby="gallery-title">
         <div className="galleryInner">
           <div className="sectionHeader">
-            <h2 id="gallery-title">Photo gallery infrastructure.</h2>
+            <h2 id="gallery-title">Moments from ShAMA.</h2>
             <p>
-              These image-ready placeholders are set up for classes,
-              performances, student moments, instruments, artwork, and
-              workshops.
+              A visual look at classes, performances, student moments,
+              instruments, artwork, and community workshops.
             </p>
           </div>
           <div className="galleryGrid">
@@ -839,7 +838,7 @@ export function App() {
           <h2>Start with one conversation.</h2>
           <p>
             Whether you are choosing a first music class for your child or
-            returning to an art form yourself, Shonali can help you find the
+            returning to an art form yourself, we can help you find the
             right starting point.
           </p>
           <div className="contactMethods">
