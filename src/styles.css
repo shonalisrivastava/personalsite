@@ -314,7 +314,12 @@ h2 {
 .sectionHeader p,
 .aboutCopy p,
 .foundation p,
-.contact p {
+.contact p,
+.seniorHeroCopy p,
+.seniorAbout p,
+.registrationPanel p,
+.donationPanel p,
+.gallerySection p {
   margin: 0;
   color: var(--muted);
   font-size: 1.02rem;
@@ -354,6 +359,69 @@ h2 {
   color: var(--muted);
   font-size: 0.97rem;
   line-height: 1.62;
+}
+
+.detailGrid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1px;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
+.detailCard {
+  min-width: 0;
+  padding: clamp(22px, 3vw, 34px);
+  background: rgba(255, 252, 246, 0.72);
+  transition: transform 180ms ease, background 180ms ease, box-shadow 180ms ease;
+}
+
+.detailCard:hover {
+  transform: translateY(-4px);
+  background: var(--paper);
+  box-shadow: 0 18px 42px rgba(36, 25, 39, 0.08);
+}
+
+.detailIcon {
+  display: inline-flex;
+  width: 52px;
+  height: 52px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(248, 165, 27, 0.16);
+  color: var(--ruby);
+}
+
+.detailCard h3 {
+  margin: 26px 0 20px;
+  color: var(--indigo);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.55rem;
+  font-weight: 400;
+  line-height: 1.06;
+}
+
+.detailCard dl {
+  display: grid;
+  gap: 17px;
+  margin: 0;
+}
+
+.detailCard dt {
+  margin-bottom: 5px;
+  color: var(--ruby);
+  font-size: 0.76rem;
+  font-weight: 820;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.detailCard dd {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.54;
 }
 
 .about {
@@ -473,9 +541,488 @@ h2 {
   font-weight: 780;
 }
 
+.seniorClasses {
+  padding: clamp(76px, 10vw, 128px) 0;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(248, 165, 27, 0.18), transparent 26rem),
+    linear-gradient(180deg, #fffdf8 0%, rgba(255, 248, 237, 0.94) 100%);
+}
+
+.seniorHero,
+.seniorPrograms,
+.seniorRegistrationWrap,
+.seniorAbout {
+  width: min(1160px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.seniorHero {
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(340px, 0.58fr);
+  gap: clamp(34px, 6vw, 82px);
+  align-items: center;
+}
+
+.seniorHeroCopy {
+  min-width: 0;
+}
+
+.eyebrow {
+  margin: 0 0 16px;
+  color: var(--teal);
+  font-size: 0.78rem;
+  font-weight: 830;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.seniorHero h2 {
+  max-width: 780px;
+}
+
+.seniorHero h3 {
+  margin: 24px 0 0;
+  color: var(--ruby);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.55rem, 3vw, 2.55rem);
+  font-weight: 400;
+  line-height: 1.08;
+}
+
+.seniorHeroCopy p:not(.eyebrow) {
+  max-width: 650px;
+  margin-top: 22px;
+  font-size: clamp(1.08rem, 1.8vw, 1.24rem);
+}
+
+.seniorHeroCopy .primaryButton {
+  margin-top: 32px;
+}
+
+.seniorImageGrid {
+  display: grid;
+  grid-template-columns: 1fr 0.84fr;
+  grid-template-rows: repeat(2, minmax(150px, 1fr));
+  gap: 14px;
+}
+
+.imagePlaceholder,
+.galleryPlaceholder {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: flex-end;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 8px;
+  padding: 22px;
+  background:
+    linear-gradient(145deg, rgba(255, 252, 246, 0.82), rgba(248, 165, 27, 0.18)),
+    var(--paper);
+  color: var(--indigo);
+  box-shadow: 0 18px 44px rgba(36, 25, 39, 0.08);
+}
+
+.imagePlaceholder {
+  min-height: 164px;
+}
+
+.imagePlaceholder:first-child {
+  grid-row: span 2;
+  min-height: 342px;
+  background:
+    linear-gradient(160deg, rgba(37, 32, 91, 0.88), rgba(159, 36, 58, 0.34)),
+    var(--indigo);
+  color: white;
+}
+
+.imagePlaceholder svg {
+  margin-bottom: 18px;
+  color: var(--saffron);
+}
+
+.imagePlaceholder span {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.25rem, 2vw, 1.65rem);
+  line-height: 1.15;
+}
+
+.seniorAbout {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  margin-top: clamp(40px, 7vw, 78px);
+  border-left: 4px solid var(--saffron);
+  padding: 22px 26px;
+  background: rgba(255, 252, 246, 0.72);
+  box-shadow: 0 18px 42px rgba(36, 25, 39, 0.06);
+}
+
+.seniorAbout svg {
+  flex: 0 0 auto;
+  color: var(--ruby);
+}
+
+.seniorAbout p {
+  max-width: 860px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.18rem, 2vw, 1.55rem);
+  line-height: 1.45;
+}
+
+.seniorPrograms {
+  padding-top: clamp(72px, 9vw, 112px);
+}
+
+.seniorProgramGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.seniorProgramCard,
+.testimonialCard {
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: clamp(22px, 3vw, 32px);
+  background: rgba(255, 252, 246, 0.72);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.seniorProgramCard:hover,
+.testimonialCard:hover,
+.galleryPlaceholder:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 42px rgba(36, 25, 39, 0.08);
+}
+
+.seniorProgramCard svg,
+.testimonialCard svg,
+.galleryPlaceholder svg {
+  color: var(--ruby);
+}
+
+.seniorProgramCard h3,
+.galleryPlaceholder h3 {
+  margin: 28px 0 12px;
+  color: var(--indigo);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.45rem;
+  font-weight: 400;
+}
+
+.seniorProgramCard p,
+.galleryPlaceholder p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.98rem;
+  line-height: 1.62;
+}
+
+.seniorRegistrationWrap {
+  display: grid;
+  grid-template-columns: minmax(0, 0.72fr) minmax(300px, 0.34fr);
+  gap: 24px;
+  align-items: start;
+  padding-top: clamp(72px, 9vw, 112px);
+}
+
+.registrationPanel,
+.donationPanel,
+.inquiryForm {
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 252, 246, 0.82);
+  box-shadow: 0 22px 58px rgba(36, 25, 39, 0.08);
+}
+
+.registrationPanel,
+.inquiryForm {
+  padding: clamp(24px, 4vw, 42px);
+}
+
+.registrationPanel h2,
+.donationPanel h2 {
+  font-size: clamp(2rem, 4vw, 3.4rem);
+}
+
+.registrationPanel p {
+  margin-top: 18px;
+  max-width: 660px;
+}
+
+.registrationForm,
+.inquiryForm {
+  display: grid;
+  gap: 22px;
+}
+
+.registrationForm {
+  margin-top: 30px;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+label,
+fieldset {
+  min-width: 0;
+}
+
+label span,
+legend {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--ink);
+  font-size: 0.92rem;
+  font-weight: 780;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border: 1px solid rgba(36, 25, 39, 0.22);
+  border-radius: 8px;
+  padding: 14px 15px;
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--ink);
+  font: inherit;
+  font-size: 1rem;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--teal);
+  outline: 3px solid rgba(15, 118, 110, 0.18);
+}
+
+textarea {
+  resize: vertical;
+}
+
+small {
+  display: block;
+  margin-top: 7px;
+  color: var(--ruby);
+  font-size: 0.86rem;
+  font-weight: 680;
+}
+
+fieldset {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+.checkboxGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.checkboxOption {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 48px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.52);
+}
+
+.checkboxOption input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--ruby);
+}
+
+.checkboxOption span {
+  margin: 0;
+  font-weight: 720;
+}
+
+.submitButton {
+  display: inline-flex;
+  min-height: 52px;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 0;
+  border-radius: 999px;
+  padding: 0 24px;
+  background: var(--ruby);
+  color: white;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 780;
+  box-shadow: 0 18px 34px rgba(159, 36, 58, 0.24);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.submitButton:hover,
+.primaryButton:hover,
+.secondaryButton:hover {
+  transform: translateY(-2px);
+}
+
+.submitButton:focus-visible,
+.primaryButton:focus-visible,
+.secondaryButton:focus-visible,
+.textLink:focus-visible {
+  outline: 3px solid rgba(15, 118, 110, 0.22);
+  outline-offset: 3px;
+}
+
+.successMessage,
+.errorMessage {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border-radius: 8px;
+  padding: 14px 16px;
+  font-weight: 760;
+}
+
+.successMessage {
+  border: 1px solid rgba(15, 118, 110, 0.28);
+  background: rgba(15, 118, 110, 0.09);
+  color: var(--teal);
+}
+
+.errorMessage {
+  border: 1px solid rgba(159, 36, 58, 0.28);
+  background: rgba(159, 36, 58, 0.09);
+  color: var(--ruby);
+}
+
+.successMessage svg {
+  flex: 0 0 auto;
+}
+
+.submitButton:disabled {
+  cursor: wait;
+  opacity: 0.72;
+  transform: none;
+}
+
+.hiddenField {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.donationPanel {
+  position: sticky;
+  top: 100px;
+  padding: clamp(24px, 3vw, 34px);
+}
+
+.donationPanel > svg {
+  color: var(--saffron);
+}
+
+.donationPanel h2 {
+  margin-top: 20px;
+}
+
+.donationPanel p {
+  margin-top: 18px;
+}
+
+.donationLinks {
+  display: grid;
+  gap: 10px;
+  margin: 24px 0;
+}
+
+.donationLinks a {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 13px 14px;
+  background: rgba(255, 255, 255, 0.58);
+  color: var(--indigo);
+  font-weight: 760;
+}
+
+.seniorNote {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.seniorNote svg {
+  flex: 0 0 auto;
+  color: var(--teal);
+}
+
+.testimonials .sectionHeader {
+  align-items: start;
+}
+
+.testimonialGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.testimonialCard {
+  margin: 0;
+}
+
+.testimonialCard blockquote {
+  margin: 28px 0 18px;
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.25rem, 2vw, 1.55rem);
+  line-height: 1.36;
+}
+
+.testimonialCard figcaption {
+  color: var(--ruby);
+  font-size: 0.92rem;
+  font-weight: 780;
+}
+
+.gallerySection {
+  padding: clamp(74px, 10vw, 126px) 0;
+  background:
+    linear-gradient(180deg, rgba(37, 32, 91, 0.05), rgba(159, 36, 58, 0.05)),
+    rgba(255, 252, 246, 0.52);
+}
+
+.galleryInner {
+  width: min(1160px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.galleryPlaceholder {
+  min-height: 260px;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
 .contact {
   display: grid;
-  grid-template-columns: minmax(0, 0.78fr) minmax(280px, 0.38fr);
+  grid-template-columns: minmax(0, 0.48fr) minmax(360px, 0.62fr);
   gap: clamp(30px, 7vw, 90px);
   width: min(1160px, calc(100% - 40px));
   margin: 0 auto;
@@ -494,6 +1041,7 @@ h2 {
 .contactMethods {
   display: grid;
   gap: 14px;
+  margin-top: 28px;
   align-content: center;
 }
 
@@ -532,7 +1080,9 @@ h2 {
   .hero,
   .sectionHeader,
   .about,
-  .contact {
+  .contact,
+  .seniorHero,
+  .seniorRegistrationWrap {
     grid-template-columns: 1fr;
   }
 
@@ -547,12 +1097,20 @@ h2 {
   }
 
   .introBand,
-  .offeringGrid {
+  .offeringGrid,
+  .detailGrid,
+  .seniorProgramGrid,
+  .testimonialGrid,
+  .galleryGrid {
     grid-template-columns: 1fr 1fr;
   }
 
   .photoCaption {
     right: 16px;
+  }
+
+  .donationPanel {
+    position: static;
   }
 }
 
@@ -585,7 +1143,12 @@ h2 {
 
   .hero,
   .section,
-  .contact {
+  .contact,
+  .seniorHero,
+  .seniorPrograms,
+  .seniorRegistrationWrap,
+  .seniorAbout,
+  .galleryInner {
     width: min(100% - 28px, 362px);
   }
 
@@ -633,8 +1196,29 @@ h2 {
   }
 
   .introBand,
-  .offeringGrid {
+  .offeringGrid,
+  .detailGrid,
+  .seniorProgramGrid,
+  .testimonialGrid,
+  .galleryGrid,
+  .formGrid,
+  .checkboxGrid,
+  .seniorImageGrid {
     grid-template-columns: 1fr;
+  }
+
+  .seniorImageGrid {
+    grid-template-rows: none;
+  }
+
+  .imagePlaceholder:first-child {
+    grid-row: auto;
+    min-height: 210px;
+  }
+
+  .imagePlaceholder,
+  .galleryPlaceholder {
+    min-height: 190px;
   }
 
   .introBand div,
@@ -659,5 +1243,9 @@ h2 {
 
   .contactMethods a {
     align-items: flex-start;
+  }
+
+  .submitButton {
+    width: 100%;
   }
 }
