@@ -240,8 +240,8 @@ export function App() {
       nextErrors.fullName = "Please enter your full name.";
     }
 
-    if (!formData.age || Number.isNaN(numericAge) || numericAge < 65) {
-      nextErrors.age = "Please enter an age of 65 or older.";
+    if (!formData.age || Number.isNaN(numericAge) || numericAge < 0) {
+      nextErrors.age = "Please enter a valid age.";
     }
 
     if (!/^[+()\-\s\d]{7,}$/.test(formData.phone.trim())) {
@@ -258,10 +258,6 @@ export function App() {
 
     if (formData.interestedClasses.length === 0) {
       nextErrors.interestedClasses = "Please choose at least one class.";
-    }
-
-    if (!formData.preferredTimes.trim()) {
-      nextErrors.preferredTimes = "Please share preferred days or times.";
     }
 
     return nextErrors;
@@ -647,7 +643,7 @@ export function App() {
                   <input
                     name="age"
                     type="number"
-                    min="65"
+                    min="0"
                     inputMode="numeric"
                     value={formData.age}
                     onChange={(event) => updateField("age", event.target.value)}
@@ -713,7 +709,6 @@ export function App() {
                     onChange={(event) => updateField("preferredTimes", event.target.value)}
                     aria-invalid={Boolean(errors.preferredTimes)}
                     aria-describedby={errors.preferredTimes ? "preferredTimes-error" : undefined}
-                    required
                   />
                   {errors.preferredTimes && (
                     <small id="preferredTimes-error">{errors.preferredTimes}</small>
